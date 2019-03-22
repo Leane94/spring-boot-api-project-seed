@@ -4,7 +4,9 @@ package com.company.project.core;
  * 响应码枚举，参考HTTP状态码的语义
  */
 public enum ResultCode {
+    QICHACHAFAIL(100),//企查查接口错误
     SUCCESS(200),//成功
+    PARAMERROR(210),//请求参数错误
     FAIL(400),//失败
     UNAUTHORIZED(401),//未认证（签名错误）
     NOT_FOUND(404),//接口不存在

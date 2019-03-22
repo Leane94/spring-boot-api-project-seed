@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.company.project.dao.BaseInfoMapper">
+  <resultMap id="BaseResultMap" type="com.company.project.model.BaseInfo">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="credit_code" jdbcType="VARCHAR" property="creditCode" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="legal_rep" jdbcType="VARCHAR" property="legalRep" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="reg_cap" jdbcType="VARCHAR" property="regCap" />
+    <result column="status" jdbcType="VARCHAR" property="status" />
+    <result column="expt_label" jdbcType="VARCHAR" property="exptLabel" />
+    <result column="est_date" jdbcType="DATE" javaType="java.util.Date" property="estDate" />
+    <result column="start_date" jdbcType="DATE" property="startDate" />
+    <result column="end_date" jdbcType="DATE" property="endDate" />
+    <result column="reg_auth" jdbcType="VARCHAR" property="regAuth" />
+    <result column="pass_date" jdbcType="DATE" property="passDate" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="clear_leader" jdbcType="VARCHAR" property="clearLeader" />
+    <result column="clear_memebers" jdbcType="VARCHAR" property="clearMemebers" />
+    <result column="biz_scope" jdbcType="LONGVARCHAR" property="bizScope" />
+  </resultMap>
+  <delete id="deleteByCreditCode" parameterType="java.lang.String">
+    delete from base_info where credit_code = #{credit_code,jdbcType=VARCHAR}
+  </delete>
+</mapper>
